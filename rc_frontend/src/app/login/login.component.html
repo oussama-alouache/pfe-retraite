@@ -1,0 +1,40 @@
+
+<div  class="flex flex-col h-screen  absolute  rounded-md justify-center items-center   space-y-7 "  > 
+  <video src=  "assets/videoplayback.webm"autoplay="{true}" loop muted > </video>
+
+
+ <div class="flex flex-col absolute w-96 bg-white rounded-md justify-center items-center bg-opacity-10  ">
+
+<div class="flex flex-col m-16 space-y-7 justify-center items-cente " >
+
+ <div class="text-3xl text-white uppercase ml-8">
+     bienvenu
+ </div>
+ <form (ngSubmit)="onSubmit()">
+<div class="flex flex-col items-center text-center text-white  font-bold space-y-2"  >
+<label>E-mail</label>
+<input class="rounded-md border-blue-400 tems-center text-center " type="text" [(ngModel)]="login.email" name="email" required>      
+</div>
+<div class="flex flex-col items-center text-center text-white  font-bold space-y-2"  >
+<label>mot de passe</label>
+
+<div  class="flex flex-row">
+  <input class="rounded-md border-blue-400 text-black tems-center text-center" type="{{ showPassword ? 'text' : 'password' }}"  [(ngModel)]="login.password" name="password" required       >
+<p (click)="togglePasswordVisibility()">show</p>
+
+
+</div>
+
+</div>
+<div class="flex flex-col items-center text-center text-red-800 font-bold space-y-2" *ngIf="error==true">
+  <strong>login ou mot de passe erronés..</strong>
+</div>
+<div class="justify-center items-cente  m-10">
+<button type="submit" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">ce connceter</button>
+</div>
+ </form>
+</div>
+
+ </div>
+
+</div>
